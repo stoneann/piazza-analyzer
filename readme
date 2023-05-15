@@ -1,0 +1,71 @@
+# Piazza Scraper
+
+The programs and files in this folder help pull data from piazza, process it, and then analyze it. Data is pulled from piazza using scraper.py and is saved into CSV files in the posts folder. To analyze the Frequently Asked Questions, run the faq-analyzer.py program. To find similar questions to a particular piazza question, run the similar_posts_search.py program.
+
+More information on each program is below.
+
+## Setup
+
+1. Create a virtual env using "python3 -m venv ____" where ____ is the name of the virtual env. More information on creating virtual environments can be found at: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/.
+
+2. Enter into your virtual env using "source ___/bin/activate". Whenever you run this program, make sure you enter into the virtual environment.
+
+3. Install the requirements using "pip install -r requirements.txt".
+
+## similar_posts_search.py
+
+You can run the program using:
+
+python3 ./similar_posts_search.py 
+
+It has the following options:
+  -nr, --num_results INTEGER      Number of search results to display
+  -q, --question TEXT             The piazza question to search for
+                                  [required]
+  -a, --algorithm INTEGER         The search algorithm to use. The options
+                                  are:  Bag of Words (1) Cosine similarity (2)
+  -f, --folder TEXT               The folder to search for the question in.
+                                  Options are: project1, project2, project3,
+                                  project4, project5, midterm, and final
+                                  [required]
+  -mpl, --max_print_length INTEGER
+                                  The maximum print length of the output
+                                  before running onto the next line.
+  --help                          Show this message and exit.
+
+## faq-analyzer.py
+
+You can run the program using:
+
+python3 ./faq-analyzer.py 
+
+It has the following options:
+  -f, --folder TEXT             The folder to search for the question in.
+                                Options are: project1, project2, project3,
+                                project4, project5, midterm, and final
+                                [required]
+  -a, --algorithm INTEGER       The search algorithm to use. The options are:
+                                Bag of Words (1) Cosine similarity (2)
+  -ns, --num_semesters INTEGER  Number of semesters to include while
+                                generating the Frequently Asked Questions.
+  --help                        Show this message and exit.
+
+## scraper.py
+### Note: unless authorized, DO NOT RUN THIS PROGRAM
+
+You can run the program using:
+
+python3 ./scraper.py 
+
+It has the following options:
+  -u, --username TEXT       Piazza username.
+  -p, --password TEXT       Piazza password.
+  -n, --nid TEXT            Piazza course id. Found in the username when
+                            loading class piazza.
+  -f, --filter_folder TEXT  Folder to filter on when getting posts.
+  --help                    Show this message and exit.
+
+## Acknowledgements
+
+This project was put together by Ann Stone. If there are any questions, comments, or concerns,
+you can contact her at stoneann@umich.edu.
