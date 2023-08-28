@@ -53,7 +53,8 @@ It has the following options:
 ## scraper.py
 ### Note: unless authorized, DO NOT RUN THIS PROGRAM
 
-You can run the program using:
+If getting all the posts from a semester, this program will take 1.5 hours to complete because the 
+piazza server can only handle a certain number of requests. You can run the program using:
 
 python3 ./scraper.py 
 
