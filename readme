@@ -62,7 +62,7 @@ It has the following options:
   -p, --password TEXT       Piazza password.
   -n, --nid TEXT            Piazza course id. Found in the username when
                             loading class piazza.
-  -f, --filter_folder TEXT  Folder to filter on when getting posts.
+  -f, --filter_folder TEXT  Folder to filter on when getting posts. If not specified, will get all posts.
   --help                    Show this message and exit.
 
 ## Acknowledgements
